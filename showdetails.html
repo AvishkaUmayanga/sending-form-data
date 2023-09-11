@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./showdetails.css">
+	<title>Show Details</title>
+</head>
+<body>
+	<div class="container">
+        
+        <div class="data">
+        	<h2>Your Details</h2><br>
+            <p><strong>Name:</strong> <span id="showName"></span></p>
+            <p><strong>Age:</strong> <span id="showAge"></span></p>
+            <p><strong>Course Name:</strong> <span id="showCourse"></span></p>
+            <p><strong>Academic Year:</strong> <span id="showAcademicYear"></span></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    	document.getElementById('showName').innerHTML = localStorage.getItem('firstName') + ' ' + localStorage.getItem('lastName');
+    	document.getElementById('showAge').innerHTML = localStorage.getItem('age');
+    	document.getElementById('showCourse').innerHTML = localStorage.getItem('courseName');
+    	document.getElementById('showAcademicYear').innerHTML = localStorage.getItem('academicYear');
+    </script>
+
+</body>
+</html>

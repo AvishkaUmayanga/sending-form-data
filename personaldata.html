@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./personaldata.css">
+	<title>Personal Details</title>
+
+	<script type="text/javascript">
+		function sendPersonal() {
+			var firstName = document.getElementById('firstName').value;
+			var lastName = document.getElementById('lastName').value;
+			var age = document.getElementById('age').value;
+			localStorage.setItem('firstName',firstName);
+			localStorage.setItem('lastName',lastName);
+			localStorage.setItem('age',age);
+			return false;
+		}
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<form action="coursedetails.html" method='post'>
+			<label>First Name:</label>
+			<input type="text" name="firstName" id="firstName" required>
+			<label>Last Name:</label>
+			<input type="text" name="lastName" id="lastName" required>
+			<label>Age:</label>
+			<input type="text" name="age" id="age" required>
+			<input type="submit" value="submit" onclick="sendPersonal()">
+		</form>
+	</div>
+</body>
+</html>
