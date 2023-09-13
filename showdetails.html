@@ -18,12 +18,16 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-    	document.getElementById('showName').innerHTML = localStorage.getItem('firstName') + ' ' + localStorage.getItem('lastName');
-    	document.getElementById('showAge').innerHTML = localStorage.getItem('age');
-    	document.getElementById('showCourse').innerHTML = localStorage.getItem('courseName');
-    	document.getElementById('showAcademicYear').innerHTML = localStorage.getItem('academicYear');
-    </script>
 
+    <script type="text/javascript">
+        const myValues = window.location.search;
+        const urlParams = new URLSearchParams(myValues)
+        document.getElementById('showCourse').innerText = urlParams.get('courseName');
+        document.getElementById('showAcademicYear').innerText = urlParams.get('academicYear');
+
+        document.getElementById('showName').innerText = urlParams.get('fName') + ' ' + urlParams.get('lName');
+        document.getElementById('showAge').innerText = urlParams.get('aAge');
+       
+    </script>
 </body>
 </html>

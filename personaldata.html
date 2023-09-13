@@ -6,29 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="./css/personaldata.css">
 	<title>Personal Details</title>
 
-	<script type="text/javascript">
-		function sendPersonal() {
-			var firstName = document.getElementById('firstName').value;
-			var lastName = document.getElementById('lastName').value;
-			var age = document.getElementById('age').value;
-			localStorage.setItem('firstName',firstName);
-			localStorage.setItem('lastName',lastName);
-			localStorage.setItem('age',age);
-			return false;
-		}
-	</script>
 
 </head>
 <body>
 	<div class="container">
-		<form action="coursedetails.html" method='post'>
+		<form action="coursedetails.html" method='get'>
 			<label>First Name:</label>
 			<input type="text" name="firstName" id="firstName" required>
 			<label>Last Name:</label>
 			<input type="text" name="lastName" id="lastName" required>
 			<label>Age:</label>
 			<input type="text" name="age" id="age" required>
-			<input type="submit" value="submit" onclick="sendPersonal()">
+			<input type="submit" value="submit">
 		</form>
 	</div>
 </body>
